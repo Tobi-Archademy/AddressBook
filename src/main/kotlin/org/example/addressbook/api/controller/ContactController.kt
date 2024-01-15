@@ -9,7 +9,7 @@ import java.util.*
 @RequestMapping("/api/contacts")
 class ContactController(private val repository: ContactRepository) {
 
-    @GetMapping
+    @GetMapping("/")
     fun getAllContacts(): List<Contact> = repository.findAll() // fetches all contacts
 
     @PostMapping
